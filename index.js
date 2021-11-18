@@ -1,6 +1,4 @@
 const {verifyPassURI, verifyPassURIWithTrustedIssuers} = require('@vaxxnz/nzcp');
-//const { json } = require('express');
-//rest api setup
 const express = require("express");
 var bp = require('body-parser')
 //const { json } = require('stream/consumers');

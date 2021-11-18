@@ -9,7 +9,7 @@ app.use(bp.urlencoded({ extended: true }))
 app.use(express.json());
 //use https only
 
-app.get("/verify", async (req, res) => {
+app.get("/verify", async, (req, res) => {
     //only accept https
     /*
     if (req.protocol !== 'https') {

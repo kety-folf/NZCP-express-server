@@ -18,9 +18,9 @@ app.get("/verify", async (req, res) => {
     */
     var code = JSON.stringify(req.query.token);
    // const trustedIssuers =  ["did:web:nzcp.identity.health.nz","did:web:nzcp.covid19.health.nz"] uncomment if testing and comment line below
-    const trustedIssuers =  ["did:web:nzcp.identity.health.nz"]
+    const trustedIssuers =  ["c"]
     try {
-        let result = await verifyPassURIWithTrustedIssuers(code,trustedIssuers);
+        let result = await verifyPassURI(code, {trustedIssuer: "did:web:nzcp.identity.health.nz"});
         
        
         res.send(result);

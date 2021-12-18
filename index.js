@@ -11,7 +11,7 @@ app.use(express.json());
 app.get("/verify", async (req, res) => {
     var code = JSON.stringify(req.query.token);
     try {
-        let result = await verifyPassURIOffline(code);
+        let result = await verifyPassURI(code);
         
        
         res.send(result);
